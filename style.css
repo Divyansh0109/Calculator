@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    
+   height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background: #0c0b0bf4;
+
+}
+.backspace {
+    flex: 2;  /* Makes the button twice as wide as other buttons */
+    font-size: 1.5em;  /* Makes the arrow symbol bigger */
+    font-weight: bold;
+}
+
+/* If you need to adjust the clear button to match, add: */
+.clear {
+    flex: 1;  /* Keeps the clear button standard size */
+}
+.wrapper {
+    width: 320px;
+    background: #222;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    padding: 20px;
+}
+.result {
+    background: #000;
+    color: #0f0f;
+    width: 100%;
+    font-size: 2rem;
+    text-align: right;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    height: 70px;
+    overflow-x: auto;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
+}
+.cal-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 12px;
+
+}
+button {
+    height: 60px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+button :active {
+    transform: scale(0.95);
+}
+button {
+    background: #333;
+    color: #fff;
+}
+button:hover {
+    background: #444;
+}
+button:nth-child(4),
+button:nth-child(8) {
+    background: #ff9500;
+    color: #fff;
+}
+button:nth-child(4):hover,
+button:nth-child(8):hover {
+    background: #e07b00;
+}
+.cal-buttons:first-of-type button:nth-child(1),
+.cal-buttons:first-of-type button:nth-child(2) {
+    background: #dc3545;
+    color: #fff;
+}
+.cal-buttons:first-of-type button:nth-child(1):hover,
+.cal-buttons:first-of-type button:nth-child(2):hover {
+    background: #c82333;
+}
+button:last-of-type button {
+    background: #28a745;
+    color: #fff;
+}
+button:last-of-type button:hover {
+    background: #218838;
+}
